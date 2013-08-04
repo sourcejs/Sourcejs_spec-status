@@ -1,0 +1,238 @@
+/*
+*
+* Spec status plugin
+*
+* @author Robert Haritonov (http://rhr.me)
+* Organised by http://rhr.me/MCSS methodology
+*
+* */
+/* Base
+---------------------------------------------------------------------------------- */
+/* Controls list
+-------------------------------------------------- */
+.source_status-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.source_status-list_li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 30px;
+  margin: 0 2px;
+}
+.source_status-list_a .source_status_badge {
+  cursor: pointer;
+}
+/* /Controls list */
+/* Small badge
+-------------------------------------------------- */
+.source_status_badge {
+  width: 30px;
+  height: 30px;
+  background-image: url(../i/dev__sm.png);
+  background-size: cover;
+  cursor: help;
+  /* Hiding text */
+
+  font: 0/0 a;
+  color: transparent;
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge {
+    top: 5px;
+    background-image: url(../i/dev.png);
+  }
+}
+.source_status_badge.__exp {
+  background-image: url(../i/exp__sm.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge.__exp {
+    background-image: url(../i/exp.png);
+  }
+}
+.source_status_badge.__rec {
+  background-image: url(../i/rec__sm.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge.__rec {
+    background-image: url(../i/rec.png);
+  }
+}
+.source_status_badge.__ready {
+  background-image: url(../i/ready__sm.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge.__ready {
+    background-image: url(../i/ready.png);
+  }
+}
+.source_status_badge.__rev {
+  background-image: url(../i/rev__sm.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge.__rev {
+    background-image: url(../i/rev.png);
+  }
+}
+/* /Small badge */
+/* Big badge
+-------------------------------------------------- */
+.source_status_badge-big {
+  width: 56px;
+  height: 56px;
+  background-image: url(../i/dev.png);
+  background-size: cover;
+  cursor: help;
+  /* Hiding text */
+
+  font: 0/0 a;
+  color: transparent;
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge-big {
+    background-image: url(../i/dev__x2.png);
+  }
+}
+.ie8 .source_status_badge-big {
+  background-image: url(../i/dev__sm.png);
+}
+.source_status_badge-big.__exp {
+  background-image: url(../i/exp.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge-big.__exp {
+    background-image: url(../i/exp__x2.png);
+  }
+}
+.ie8 .source_status_badge-big.__exp {
+  background-image: url(../i/exp__sm.png);
+}
+.source_status_badge-big.__rec {
+  background-image: url(../i/rec.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge-big.__rec {
+    background-image: url(../i/rec__x2.png);
+  }
+}
+.ie8 .source_status_badge-big.__rec {
+  background-image: url(../i/rec__sm.png);
+}
+.source_status_badge-big.__ready {
+  background-image: url(../i/ready.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge-big.__ready {
+    background-image: url(../i/ready__x2.png);
+  }
+}
+.ie8 .source_status_badge-big.__ready {
+  background-image: url(../i/ready__sm.png);
+}
+.source_status_badge-big.__rev {
+  background-image: url(../i/rev.png);
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status_badge-big.__rev {
+    background-image: url(../i/rev__x2.png);
+  }
+}
+.ie8 .source_status_badge-big.__rev {
+  background-image: url(../i/rev__sm.png);
+}
+/* /Big badge */
+/* /Base
+---------------------------------------------------------------------------------- */
+/* Project
+---------------------------------------------------------------------------------- */
+/* Spec status
+-------------------------------------------------- */
+.source_info.status {
+  position: relative;
+  padding-right: 25px;
+}
+.source_info .source_status-controls {
+  position: relative;
+  z-index: 1;
+  margin-left: 50px;
+  margin-top: -7px;
+  float: right;
+}
+.source_status-controls {
+  width: 56px;
+}
+.source_status-controls:hover .source_status-controls_change {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.source_status-controls_change {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 50%;
+  top: 100%;
+  width: 500px;
+  margin-right: -250px;
+  text-align: center;
+  -webkit-transition: .15s opacity,visibility 0s .15s;
+  -moz-transition: .15s opacity,visibility 0s .15s;
+  -o-transition: .15s opacity,visibility 0s .15s;
+  transition: .15s opacity,visibility 0s .15s;
+  line-height: 0;
+  font-size: 0;
+}
+.source_status-controls_change:after {
+  position: absolute;
+  content: '';
+  bottom: -15px;
+  left: -15px;
+  z-index: -1;
+  right: -15px;
+  height: 115px;
+}
+.source_status-controls .source_status-list {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2px 1px 3px;
+  border-radius: 30px;
+  border: solid 1px #67A9D4;
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .source_status-controls .source_status-list {
+    padding-bottom: 1px;
+  }
+}
+.source_status-controls .source_status_badge-big {
+  position: relative;
+  z-index: 1;
+}
+/* /Spec status */
+/* Section status
+-------------------------------------------------- */
+.status-exp,
+.status-dev {
+  position: relative;
+}
+.source_section .source_section_h .source_status_badge {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+}
+.source_section h3 .source_status_badge {
+  position: absolute;
+  z-index: 1;
+  right: 4px;
+  top: -3px;
+}
+/* /Section status */
+/* /Project
+---------------------------------------------------------------------------------- */

@@ -1,0 +1,7 @@
+{
+  "name": "specStatus",
+  "version": "0.1.0",
+  "dependencies": {
+    "modernizr": "*"
+  }
+}

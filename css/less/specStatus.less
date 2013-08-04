@@ -1,0 +1,277 @@
+/*
+*
+* Spec status plugin
+*
+* @author Robert Haritonov (http://rhr.me)
+* Organised by http://rhr.me/MCSS methodology
+*
+* */
+
+
+
+/* Base
+---------------------------------------------------------------------------------- */
+
+@media-retina: ~'only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)';
+
+/* Controls list
+-------------------------------------------------- */
+
+.source_status-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &_li {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 30px;
+        margin: 0 2px;
+        }
+
+    &_a {
+        .source_status_badge {
+            cursor: pointer;
+            }
+        }
+
+    }
+
+/* /Controls list */
+
+
+/* Small badge
+-------------------------------------------------- */
+//Small badges are used only for sections
+.source_status_badge {
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../i/dev__sm.png); //Dev icon by default
+    background-size: cover;
+
+    cursor: help;
+
+	/* Hiding text */
+	font: 0/0 a;
+	color: transparent;
+
+    @media @media-retina {
+        top: 5px; //Retina image has shadow
+
+        background-image: url(../i/dev.png);
+        }
+
+    &.__exp {
+        background-image: url(../i/exp__sm.png);
+
+        @media @media-retina {background-image: url(../i/exp.png);}
+        }
+
+    &.__rec {
+        background-image: url(../i/rec__sm.png);
+
+        @media @media-retina {background-image: url(../i/rec.png);}
+        }
+
+    &.__ready {
+        background-image: url(../i/ready__sm.png);
+
+        @media @media-retina {background-image: url(../i/ready.png);}
+        }
+
+    &.__rev {
+        background-image: url(../i/rev__sm.png);
+
+        @media @media-retina {background-image: url(../i/rev.png);}
+        }
+	}
+/* /Small badge */
+
+
+/* Big badge
+-------------------------------------------------- */
+//Big badges are used only for .source_info
+
+.source_status_badge-big {
+    width: 56px;
+    height: 56px;
+
+    background-image: url(../i/dev.png); //Dev icon by default
+    background-size: cover;
+
+    cursor: help;
+
+	/* Hiding text */
+	font: 0/0 a;
+	color: transparent;
+
+    @media @media-retina {background-image: url(../i/dev__x2.png);}
+    .ie8 & {background-image: url(../i/dev__sm.png);} //Background-size fallback
+
+    &.__exp {
+        background-image: url(../i/exp.png);
+
+        @media @media-retina {background-image: url(../i/exp__x2.png);}
+        .ie8 & {background-image: url(../i/exp__sm.png);} //Background-size fallback
+        }
+
+    &.__rec {
+        background-image: url(../i/rec.png);
+
+        @media @media-retina {background-image: url(../i/rec__x2.png);}
+        .ie8 & {background-image: url(../i/rec__sm.png);} //Background-size fallback
+        }
+
+    &.__ready {
+        background-image: url(../i/ready.png);
+
+        @media @media-retina {background-image: url(../i/ready__x2.png);}
+        .ie8 & {background-image: url(../i/ready__sm.png);} //Background-size fallback
+        }
+
+    &.__rev {
+        background-image: url(../i/rev.png);
+
+        @media @media-retina {background-image: url(../i/rev__x2.png);}
+        .ie8 & {background-image: url(../i/rev__sm.png);} //Background-size fallback
+        }
+    }
+/* /Big badge */
+
+/* /Base
+---------------------------------------------------------------------------------- */
+
+/* Project
+---------------------------------------------------------------------------------- */
+
+/* Spec status
+-------------------------------------------------- */
+
+.source_info { //Context
+    &.status {
+        position: relative;
+        padding-right: 25px;
+        }
+
+    .source_status-controls {
+        position: relative;
+        z-index: 1;
+
+        margin-left: 50px;
+        margin-top: -7px;
+        float: right;
+        }
+    }
+
+.source_status-controls {
+    width: 56px;
+
+    &:hover &_change {
+        opacity: 1;
+        visibility: visible;
+
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+        }
+
+    &_change {
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        right: 50%;
+        top: 100%;
+
+        width: 500px;
+        margin-right: -250px;
+
+        text-align: center;
+
+        -webkit-transition: .15s opacity,visibility 0s .15s;
+        -moz-transition: .15s opacity,visibility 0s .15s;
+        -o-transition: .15s opacity,visibility 0s .15s;
+        transition: .15s opacity,visibility 0s .15s;
+
+        line-height: 0;
+        font-size: 0;
+
+        &:after { //Reserving space for comfortable hover area
+            position: absolute;
+            content: '';
+            bottom: -15px;
+            left: -15px;
+            z-index: -1;
+            right: -15px;
+
+            height: 115px;
+            }
+        }
+
+    .source_status-list {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+
+        background: rgba(255, 255, 255, .5);
+        padding: 2px 1px 3px;
+
+        border-radius: 30px;
+        border: solid 1px #67A9D4;
+
+        @media @media-retina {padding-bottom: 1px;} //Retina images has shadow
+        }
+
+    .source_status_badge-big {
+        position:relative;
+        z-index: 1;
+        }
+    }
+
+/* /Spec status */
+
+
+/* Section status
+-------------------------------------------------- */
+
+// "status-(exp | dev | ...)" root name "status" and "-" splitter are vital for parsing statuses
+.status {
+
+    &-exp,
+    &-dev {
+        position: relative;
+        }
+
+        //...
+    }
+
+.source_section {
+
+    .source_section_h {
+
+        .source_status_badge {
+            position: absolute;
+            right: 4px;
+            top: 3px;
+            }
+
+        }
+
+    h3 {
+        .source_status_badge {
+            position: absolute;
+            z-index: 1;
+            right: 4px;
+            top: -3px;
+            }
+        }
+    }
+
+/* /Section status */
+
+
+/* /Project
+---------------------------------------------------------------------------------- */
