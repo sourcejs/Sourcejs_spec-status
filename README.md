@@ -1,4 +1,4 @@
-spec-status
+Spec status
 ===========
 
 Spec pages status
