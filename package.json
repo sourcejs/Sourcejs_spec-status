@@ -1,7 +1,7 @@
 {
   "volo": {
     "dependencies": {
-      "plugins/specStatus/mustache": "github:janl/mustache.js/0.7.2"
+      "plugins/specStatus/lib/mustache": "github:janl/mustache.js/0.7.2"
     }
   }
 }
