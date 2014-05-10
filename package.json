@@ -1,0 +1,19 @@
+{
+  "name": "sourcejs-spec-status",
+  "version": "0.2.0",
+  "description": "SourceJS plugin for Spec Statuses",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sourcejs/sourcejs-spec-status.git"
+  },
+  "keywords": [
+    "sourcejs",
+    "plugin",
+    "status"
+  ],
+  "author": "Gennady Tsarinny",
+  "bugs": {
+    "url": "https://github.com/sourcejs/sourcejs-spec-status/issues"
+  },
+  "homepage": "https://github.com/sourcejs/sourcejs-spec-status"
+}

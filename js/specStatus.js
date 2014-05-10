@@ -20,7 +20,7 @@ define([
     function SpecStatus() {
         var _this = this;
 
-        var moduleCss = new Css("specStatus/css/specStatus.css");
+        var moduleCss = new Css("sourcejs-spec-status/css/specStatus.css");
 
         this.options.pluginsOptions.specStatus = $.extend(true, {
             specStatusList: {
