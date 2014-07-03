@@ -9,12 +9,12 @@
 
 define([
     'jquery',
-    'modules/module',
-    'modules/utils',
-    'modules/sections',
-    'modules/css',
+    'sourceModules/module',
+    'sourceModules/utils',
+    'sourceModules/sections',
+    'sourceModules/css',
 
-    'modules/couch'
+    'sourceModules/couch'
     ], function ($, module, utils, sections, Css, couch) {
 
     function SpecStatus() {
