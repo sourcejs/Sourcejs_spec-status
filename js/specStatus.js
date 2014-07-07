@@ -64,17 +64,21 @@ define([
             specStatusByDef: "dev",
 
             STATUS_CONTROLS_CLASS: "source_status-controls",
-                STATUS_CONTROLS_DESCR_CLASS: "source_status-controls_descr",
-                STATUS_CONTROLS_CHANGE_CLASS: "source_status-controls_change",
+            STATUS_CONTROLS_DESCR_CLASS: "source_status-controls_descr",
+            STATUS_CONTROLS_CHANGE_CLASS: "source_status-controls_change",
 
             STATUS_LIST_CLASS: "source_status-list",
-                STATUS_LIST_LI_CLASS: "source_status-list_li",
-                STATUS_LIST_A_CLASS: "source_status-list_a",
+            STATUS_LIST_LI_CLASS: "source_status-list_li",
+            STATUS_LIST_A_CLASS: "source_status-list_a",
 
             BADGE_CLASS: "source_status_badge",
             BADGE_BIG_CLASS: "source_status_badge-big",
             STATUS_ROOT_CLASS: "status",
             SPEC_INFO_CONT: "source_info",
+
+            CATALOG_FILTER_CLASS : 'source_catalog-filter',
+            SOURCE_SUBHEAD_CLASS : 'source_subhead',
+            SOURCE_CATALOG_CLASS : 'source_catalog',
 
             RES_ALERT_FILL_INFO: "TODO: Please add spec info."
 
@@ -92,11 +96,13 @@ define([
         this.initSectionsStatus();
 
         this.initSpecStatus();
+
+        this.initCatalogFilter();
     };
 
     /*
 
-        Common
+     Common
 
      */
 
@@ -169,14 +175,14 @@ define([
         }
 
         return '<div ' +
-                   'class="'+ BADGE_CLASS +'  __'+ sectionStatus +'" title="'+statusDescr+'">' +
-                    statusDescr +
-               '</div>';
+            'class="'+ BADGE_CLASS +'  __'+ sectionStatus +'" title="'+statusDescr+'">' +
+            statusDescr +
+            '</div>';
     };
 
     /*
 
-        Spec statuses
+     Spec statuses
 
      */
 
@@ -233,7 +239,7 @@ define([
 
             if($('.'+INFO_CLASS).length === 0) {
                 $('.'+SECTION_CLASS).first().before('' +
-                    '<div class="'+INFO_CLASS+'">'+RES_ALERT_FILL_INFO+'</div>'
+                        '<div class="'+INFO_CLASS+'">'+RES_ALERT_FILL_INFO+'</div>'
                 )
             }
 
@@ -338,7 +344,7 @@ define([
                 specStatusList = _this.options.pluginsOptions.specStatus.specStatusList;
 
             return _this.drawStatusBadge(sectionStatus, specStatusList, BADGE_CLASS);
-        })
+        });
 
         //If badge is already there
         if ($('.'+BADGE_CLASS).length === 0) {
@@ -360,11 +366,11 @@ define([
             statusField = _this.options.pluginsOptions.specStatus.remoteStatusField,
 
             CONTROLS_CLASS = _this.options.pluginsOptions.specStatus.STATUS_CONTROLS_CLASS,
-                CONTROLS_CHANGE_CLASS = _this.options.pluginsOptions.specStatus.STATUS_CONTROLS_CHANGE_CLASS,
+            CONTROLS_CHANGE_CLASS = _this.options.pluginsOptions.specStatus.STATUS_CONTROLS_CHANGE_CLASS,
 
             LIST_CLASS = _this.options.pluginsOptions.specStatus.STATUS_LIST_CLASS,
-                LIST_LI_CLASS = _this.options.pluginsOptions.specStatus.STATUS_LIST_LI_CLASS,
-                LIST_A_CLASS = _this.options.pluginsOptions.specStatus.STATUS_LIST_A_CLASS,
+            LIST_LI_CLASS = _this.options.pluginsOptions.specStatus.STATUS_LIST_LI_CLASS,
+            LIST_A_CLASS = _this.options.pluginsOptions.specStatus.STATUS_LIST_A_CLASS,
 
             L_INFO_CLASS = $('.'+this.options.pluginsOptions.specStatus.SPEC_INFO_CONT),
             controlsList;
@@ -427,7 +433,7 @@ define([
 
     /*
 
-        Spec section statuses
+     Spec section statuses
 
      */
 
@@ -470,6 +476,95 @@ define([
         statusDecoration = this.drawStatusBadge(sectionClasses, sectionStatusList);
 
         header.append(statusDecoration);
+    };
+
+    SpecStatus.prototype.initCatalogFilter = function() {
+        var CATALOG_FILTER_CLASS = this.options.pluginsOptions.specStatus.CATALOG_FILTER_CLASS,
+            SOURCE_SUBHEAD_CLASS = this.options.pluginsOptions.specStatus.SOURCE_SUBHEAD_CLASS,
+            SOURCE_CATALOG_CLASS = this.options.pluginsOptions.specStatus.SOURCE_CATALOG_CLASS;
+
+        var $subhead = $('.' + SOURCE_SUBHEAD_CLASS),
+            $filter = $('.' + CATALOG_FILTER_CLASS),
+            $catalog = $('.' + SOURCE_CATALOG_CLASS),
+            $infoBlock = $('.source_info');
+
+        // $infoBLock.length to check if it is spec
+        // TODO: refactor this check
+        if (!$subhead.length || !$catalog.length || $infoBlock.length) return;
+
+        if (!$filter.length) {
+            $subhead.prepend('<div class="' + CATALOG_FILTER_CLASS + '"></div>');
+        }
+
+        this.drawStatusFilter();
+    };
+
+    // Filter specs by dev status
+    SpecStatus.prototype.drawStatusFilter = function() {
+        var CATALOG_FILTER_CLASS = this.options.pluginsOptions.specStatus.CATALOG_FILTER_CLASS,
+            specStatusList = this.options.pluginsOptions.specStatus.specStatusList,
+
+            $filterWrapper = $('.' + CATALOG_FILTER_CLASS),
+            enabledStatus = JSON.parse(localStorage.getItem('source_enabledStatus')) || {},
+
+            nav = '<ul class="source_status_filter-list">' +
+                '<li class="source_status_filter-list_li"><a href="#" id="dev" class="source_status_filter-list_a" title="' + specStatusList.dev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/dev.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="exp" class="source_status_filter-list_a" title="' + specStatusList.exp.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/exp.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="rec" class="source_status_filter-list_a" title="' + specStatusList.rec.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/rec.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="ready" class="source_status_filter-list_a" title="' + specStatusList.ready.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/ready.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="rev" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/rev.png"></a>' +
+                '</ul>';
+
+        $filterWrapper.append(nav);
+
+        var initEnabledStatusSpec = function() {
+            var $catalogItems = $('.source_catalog_list_i');
+
+            if ($.isEmptyObject(enabledStatus)) {
+                $catalogItems.show();
+                return;
+            }
+
+            $catalogItems.hide();
+
+            $.each(enabledStatus, function(statusId) {
+                $('.__' + statusId).closest('.source_catalog_list_i').show();
+                $('#' + statusId).addClass('__active');
+            });
+        };
+
+        var updateLocalStorage = function(obj) {
+            localStorage.setItem('source_enabledStatus', JSON.stringify(obj));
+        };
+
+        var updateEnabledStatusObject = function(statusId) {
+            if ( $('#' + statusId).hasClass('__active') ) {
+                enabledStatus[statusId] = true;
+            } else {
+                delete enabledStatus[statusId];
+            }
+        };
+
+        $(document).on('click', '.source_status_filter-list_a', function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+            var statusId = $this.attr('id');
+            $('#' + statusId).toggleClass('__active');
+
+            updateEnabledStatusObject(statusId);
+            updateLocalStorage(enabledStatus);
+            initEnabledStatusSpec();
+        });
+
+        // waiting when statuses update dom
+        var checkStatuses = setInterval(function(){
+            if ($('.source_status_badge').length) {
+                initEnabledStatusSpec();
+                clearInterval(checkStatuses);
+            }
+        }, 100);
+
     };
 
     return new SpecStatus();

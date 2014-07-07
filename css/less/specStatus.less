@@ -53,9 +53,9 @@
 
     cursor: help;
 
-	/* Hiding text */
-	font: 0/0 a;
-	color: transparent;
+    /* Hiding text */
+    font: 0/0 a;
+    color: transparent;
 
     @media @media-retina {
         top: 5px; //Retina image has shadow
@@ -86,7 +86,7 @@
 
         @media @media-retina {background-image: url(../i/rev.png);}
         }
-	}
+    }
 /* /Small badge */
 
 
@@ -103,9 +103,9 @@
 
     cursor: help;
 
-	/* Hiding text */
-	font: 0/0 a;
-	color: transparent;
+    /* Hiding text */
+    font: 0/0 a;
+    color: transparent;
 
     @media @media-retina {background-image: url(../i/dev__x2.png);}
     .ie8 & {background-image: url(../i/dev__sm.png);} //Background-size fallback
@@ -245,7 +245,7 @@
         position: relative;
         }
 
-        //...
+    //...
     }
 
 .source_section {
@@ -271,6 +271,74 @@
     }
 
 /* /Section status */
+
+
+/* Filters (subhead)
+-------------------------------------------------- */
+.source_status_grayscale-it(@value: 100%) {
+    -webkit-filter: grayscale(@value);
+    -moz-filter: grayscale(@value);
+    -o-filter: grayscale(@value);
+    -ms-filter: grayscale(@value);
+    filter: grayscale(@value);
+    }
+
+.source_catalog_a {
+    padding-right: 45px;
+
+    .source_status_badge {
+        position: absolute;
+        top: 7px;
+        right: 5px;
+
+        display: none;
+        }
+
+    &:hover {
+        .source_status_badge {
+            display: block;
+            }
+        }
+    }
+
+.source_status_filter-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &_li {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 30px;
+        margin: 0 2px;
+        }
+
+    &_img {
+        width: 30px;
+        opacity: 0.6;
+        transition: .2s;
+
+        .source_status_grayscale-it;
+        -webkit-transform: translateZ(0); // fix for image quality
+        -o-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        transform: translateZ(0);
+        }
+    }
+
+.source_status_filter-list_a {
+    &:hover .source_status_filter-list_img {
+        opacity: 1;
+        }
+
+    &.__active .source_status_filter-list_img {
+        opacity: 1;
+        .source_status_grayscale-it(0);
+        }
+    }
+
+/* /Filters (subhead) */
 
 
 /* /Project
