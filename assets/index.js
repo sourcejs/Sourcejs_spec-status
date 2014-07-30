@@ -20,7 +20,7 @@ define([
     function SpecStatus() {
         var _this = this;
 
-        var moduleCss = new Css("sourcejs-spec-status/css/specStatus.css");
+        var moduleCss = new Css("/node_modules/sourcejs-spec-status/assets/css/specStatus.css");
 
         this.options.pluginsOptions.specStatus = $.extend(true, {
             specStatusList: {
@@ -508,11 +508,11 @@ define([
             enabledStatus = JSON.parse(localStorage.getItem('source_enabledStatus')) || {},
 
             nav = '<ul class="source_status_filter-list">' +
-                '<li class="source_status_filter-list_li"><a href="#" id="dev" class="source_status_filter-list_a" title="' + specStatusList.dev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/dev.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="exp" class="source_status_filter-list_a" title="' + specStatusList.exp.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/exp.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="rec" class="source_status_filter-list_a" title="' + specStatusList.rec.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/rec.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="ready" class="source_status_filter-list_a" title="' + specStatusList.ready.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/ready.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="rev" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/i/rev.png"></a>' +
+                '<li class="source_status_filter-list_li"><a href="#" id="dev" class="source_status_filter-list_a" title="' + specStatusList.dev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/dev.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="exp" class="source_status_filter-list_a" title="' + specStatusList.exp.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/exp.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="rec" class="source_status_filter-list_a" title="' + specStatusList.rec.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/rec.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="ready" class="source_status_filter-list_a" title="' + specStatusList.ready.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/ready.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="rev" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/rev.png"></a>' +
                 '</ul>';
 
         $filterWrapper.append(nav);
