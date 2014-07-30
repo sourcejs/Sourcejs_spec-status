@@ -1,6 +1,6 @@
 {
   "name": "sourcejs-spec-status",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "SourceJS plugin for Spec Statuses",
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/sourcejs/sourcejs-spec-status/issues"
   },
-  "homepage": "https://github.com/sourcejs/sourcejs-spec-status"
+  "homepage": "https://github.com/sourcejs/sourcejs-spec-status",
+  "devDependencies": {
+    "load-grunt-tasks": "~0.6.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-less": "~0.11.4"
+  }
 }
