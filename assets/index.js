@@ -23,6 +23,8 @@ define([
         var moduleCss = new Css("/node_modules/sourcejs-spec-status/assets/css/specStatus.css");
 
         this.options.pluginsOptions.specStatus = $.extend(true, {
+            enabledCatalogs: ['specs'],
+            
             specStatusList: {
                 "dev" : {
                     "descr": "Development"
@@ -55,7 +57,6 @@ define([
                 }
             },
 
-            enabledCatalogs: [],
             customSpecStatus: {},
 
             remoteType: "spec",
