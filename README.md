@@ -5,10 +5,17 @@ Spec Status
 
 ![image](http://d.pr/i/Qu0e+)
 
-To install, run npm:
+To install, run npm in `sourcejs/user` folder:
 
 ```
 npm install git://github.com/sourcejs/sourcejs-spec-status --save
+```
+
+Then run Grunt update in SourceJS root:
+
+```
+cd sourcejs
+grunt update
 ```
 
 And config plugin for your preferred catalogues (specs folder names) in `/user/options.js`:
@@ -23,12 +30,11 @@ assets: {
 }
 ```
 
-
 ## Dependencies
 
 ### [CouchDB](http://couchdb.apache.org/)
 
-Install it, run locally or remotely and configure youre SourceJS in `/user/options.js`:
+Install it, run locally or remotely and configure your SourceJS in `/user/options.js`:
 
 ```
 assets: {
