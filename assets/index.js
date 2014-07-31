@@ -15,7 +15,7 @@ define([
     'sourceModules/css',
 
     'sourceModules/couch'
-    ], function ($, module, utils, sections, Css, couch) {
+], function ($, module, utils, sections, Css, couch) {
 
     function SpecStatus() {
         var _this = this;
@@ -79,6 +79,7 @@ define([
             CATALOG_FILTER_CLASS : 'source_catalog-filter',
             SOURCE_SUBHEAD_CLASS : 'source_subhead',
             SOURCE_CATALOG_CLASS : 'source_catalog',
+            CATALOG_STATUS_DATA_ATTR : 'data-status-filter',
 
             RES_ALERT_FILL_INFO: "TODO: Please add spec info."
 
@@ -93,11 +94,16 @@ define([
     SpecStatus.prototype.constructor = SpecStatus;
 
     SpecStatus.prototype.init = function () {
+        var $catalog = $('.' + this.options.pluginsOptions.specStatus.SOURCE_CATALOG_CLASS),
+            dataAttr = this.options.pluginsOptions.specStatus.CATALOG_STATUS_DATA_ATTR;
+
         this.initSectionsStatus();
 
         this.initSpecStatus();
 
-        this.initCatalogFilter();
+        if ($catalog.attr(dataAttr) !== undefined || $catalog.attr(dataAttr) == 'true') {
+            this.initCatalogFilter();
+        }
     };
 
     /*
@@ -515,7 +521,7 @@ define([
                 '<li class="source_status_filter-list_li"><a href="#" id="rev" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/rev.png"></a>' +
                 '</ul>';
 
-        $filterWrapper.append(nav);
+        $filterWrapper.prepend(nav);
 
         var initEnabledStatusSpec = function() {
             var $catalogItems = $('.source_catalog_list_i');
