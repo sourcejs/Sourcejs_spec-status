@@ -8,7 +8,7 @@ Spec Status
 To install, run npm:
 
 ```
-npm install git://github.com/sourcejs/sourcejs-spec-status#v0.2.3 --save
+npm install git://github.com/sourcejs/sourcejs-spec-status --save
 ```
 
 And config plugin for your preferred catalogues (specs folder names) in `/user/options.js`:
