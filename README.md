@@ -8,7 +8,7 @@ Spec Status
 To install, run npm in `sourcejs/user` folder:
 
 ```
-npm install git://github.com/sourcejs/sourcejs-spec-status --save
+npm install sourcejs-spec-status --save
 ```
 
 Then run Grunt update in SourceJS root:
