@@ -1,11 +1,11 @@
 Spec Status
 ===============
 
-[SourceJS](http://sourcejs.com) plugin for Spec Statuses.
+[SourceJS](http://sourcejs.com) plugin for Spec Statuses. Define the state of specific Spec with `dev`, `rec`, `ready` or any custom badges.
 
 ![image](http://d.pr/i/Qu0e+)
 
-To install, run npm in `sourcejs/user` folder:
+To install it, run npm in `sourcejs/user` folder:
 
 ```
 npm install sourcejs-spec-status --save
@@ -18,7 +18,11 @@ cd sourcejs
 grunt update
 ```
 
-And config plugin for your preferred catalogues (specs folder names) in `/user/options.js`:
+After restarting the app and defining enabled Spec catalogues in options, you will be able to set status to your Specs.
+
+## Options
+
+Define plugin options in `sourcejs/user/options.js` file:
 
 ```
 assets: {
