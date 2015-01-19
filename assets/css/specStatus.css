@@ -31,49 +31,49 @@
 .source_status_badge {
   width: 30px;
   height: 30px;
-  background-image: url(../i/dev__sm.png);
-  background-size: cover;
+  background-image: url(../i/dev__sm.png)  !important;
+  background-size: cover  !important;
   cursor: help;
   /* Hiding text */
-  font: 0/0 a;
+  font: 0/0 a  !important;
   color: transparent;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge {
-    top: 5px;
-    background-image: url(../i/dev.png);
+    top: 5px !important;
+    background-image: url(../i/dev.png) !important;
   }
 }
 .source_status_badge.__exp {
-  background-image: url(../i/exp__sm.png);
+  background-image: url(../i/exp__sm.png)  !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__exp {
-    background-image: url(../i/exp.png);
+    background-image: url(../i/exp.png)  !important;
   }
 }
 .source_status_badge.__rec {
-  background-image: url(../i/rec__sm.png);
+  background-image: url(../i/rec__sm.png)  !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__rec {
-    background-image: url(../i/rec.png);
+    background-image: url(../i/rec.png)  !important;
   }
 }
 .source_status_badge.__ready {
-  background-image: url(../i/ready__sm.png);
+  background-image: url(../i/ready__sm.png)  !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__ready {
-    background-image: url(../i/ready.png);
+    background-image: url(../i/ready.png)  !important;
   }
 }
 .source_status_badge.__rev {
-  background-image: url(../i/rev__sm.png);
+  background-image: url(../i/rev__sm.png)  !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__rev {
-    background-image: url(../i/rev.png);
+    background-image: url(../i/rev.png) !important;
   }
 }
 /* /Small badge */
@@ -82,7 +82,7 @@
 .source_status_badge-big {
   width: 56px;
   height: 56px;
-  background-image: url(../i/dev.png);
+  background-image: url(../i/dev.png)  !important;
   background-size: cover;
   cursor: help;
   /* Hiding text */
@@ -95,10 +95,10 @@
   }
 }
 .ie8 .source_status_badge-big {
-  background-image: url(../i/dev__sm.png);
+  background-image: url(../i/dev__sm.png) !important;
 }
 .source_status_badge-big.__exp {
-  background-image: url(../i/exp.png);
+  background-image: url(../i/exp.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__exp {
@@ -106,7 +106,7 @@
   }
 }
 .ie8 .source_status_badge-big.__exp {
-  background-image: url(../i/exp__sm.png);
+  background-image: url(../i/exp__sm.png)  !important;
 }
 .source_status_badge-big.__rec {
   background-image: url(../i/rec.png);
@@ -117,10 +117,10 @@
   }
 }
 .ie8 .source_status_badge-big.__rec {
-  background-image: url(../i/rec__sm.png);
+  background-image: url(../i/rec__sm.png)  !important;
 }
 .source_status_badge-big.__ready {
-  background-image: url(../i/ready.png);
+  background-image: url(../i/ready.png)  !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__ready {
@@ -128,10 +128,10 @@
   }
 }
 .ie8 .source_status_badge-big.__ready {
-  background-image: url(../i/ready__sm.png);
+  background-image: url(../i/ready__sm.png)  !important;
 }
 .source_status_badge-big.__rev {
-  background-image: url(../i/rev.png);
+  background-image: url(../i/rev.png)  !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__rev {
@@ -139,7 +139,7 @@
   }
 }
 .ie8 .source_status_badge-big.__rev {
-  background-image: url(../i/rev__sm.png);
+  background-image: url(../i/rev__sm.png)  !important;
 }
 /* /Big badge */
 /* /Base
@@ -203,8 +203,6 @@
   padding: 2px 1px 3px;
   border-radius: 30px;
   border: solid 1px #67A9D4;
-  font-size: inherit;
-  line-height: inherit;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status-controls .source_status-list {
@@ -229,9 +227,9 @@
 }
 .source_section h3 .source_status_badge {
   position: absolute;
-  z-index: 1;
+  z-index: 1  !important;
   right: 4px;
-  top: -3px;
+  top: -3px  !important;
 }
 /* /Section status */
 /* Filters (subhead)
