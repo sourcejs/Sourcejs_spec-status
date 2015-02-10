@@ -1,9 +1,9 @@
 Spec Status
 ===============
 
-[SourceJS](http://sourcejs.com) plugin for Spec Statuses. Define the state of specific Spec with `dev`, `rec`, `ready` or any custom badges.
+[SourceJS](http://sourcejs.com) plugin for Spec Statuses. Define the state of specific Spec with `dev`, `rec`, `ready`, `deprecated` or any custom badges.
 
-![image](http://d.pr/i/Qu0e+)
+![image](http://take.ms/g6r9t)
 
 To install it, run npm in `sourcejs/user` folder:
 
