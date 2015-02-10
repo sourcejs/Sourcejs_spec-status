@@ -48,7 +48,7 @@
     width: 30px;
     height: 30px;
 
-    background-image: url(../i/dev__sm.png); //Dev icon by default
+    background-image: url(../i/development_s.png); //development icon by default
     background-size: cover;
 
     cursor: help;
@@ -58,34 +58,38 @@
     color: transparent;
 
     @media @media-retina {
-        top: 5px; //Retina image has shadow
-
-        background-image: url(../i/dev.png);
+        background-image: url(../i/development_s@2x.png);
         }
 
     &.__exp {
-        background-image: url(../i/exp__sm.png);
+        background-image: url(../i/experiment_s.png);
 
-        @media @media-retina {background-image: url(../i/exp.png);}
+        @media @media-retina {background-image: url(../i/experiment_s@2x.png);}
         }
 
     &.__rec {
-        background-image: url(../i/rec__sm.png);
+        background-image: url(../i/recommend_s.png);
 
-        @media @media-retina {background-image: url(../i/rec.png);}
+        @media @media-retina {background-image: url(../i/recommend_s@2x.png);}
         }
 
     &.__ready {
-        background-image: url(../i/ready__sm.png);
+        background-image: url(../i/ready_s.png);
 
-        @media @media-retina {background-image: url(../i/ready.png);}
+        @media @media-retina {background-image: url(../i/ready_s@2x.png);}
         }
 
     &.__rev {
-        background-image: url(../i/rev__sm.png);
+        background-image: url(../i/review_s.png);
 
-        @media @media-retina {background-image: url(../i/rev.png);}
+        @media @media-retina {background-image: url(../i/review_s@2x.png);}
         }
+
+    &.__deprecated {
+      background-image: url(../i/deprecated_s.png);
+
+      @media @media-retina {background-image: url(../i/deprecated_s@2x.png);}
+      }
     }
 /* /Small badge */
 
@@ -98,7 +102,7 @@
     width: 56px;
     height: 56px;
 
-    background-image: url(../i/dev.png); //Dev icon by default
+    background-image: url(../i/development.png); //development icon by default
     background-size: cover;
 
     cursor: help;
@@ -107,36 +111,43 @@
     font: 0/0 a;
     color: transparent;
 
-    @media @media-retina {background-image: url(../i/dev__x2.png);}
-    .ie8 & {background-image: url(../i/dev__sm.png);} //Background-size fallback
+    @media @media-retina {background-image: url(../i/development@2x.png);}
+    .ie8 & {background-image: url(../i/development_s.png);} //Background-size fallback
 
     &.__exp {
-        background-image: url(../i/exp.png);
+        background-image: url(../i/experiment.png);
 
-        @media @media-retina {background-image: url(../i/exp__x2.png);}
-        .ie8 & {background-image: url(../i/exp__sm.png);} //Background-size fallback
+        @media @media-retina {background-image: url(../i/experiment@2x.png);}
+        .ie8 & {background-image: url(../i/experiment_s.png);} //Background-size fallback
         }
 
     &.__rec {
-        background-image: url(../i/rec.png);
+        background-image: url(../i/recommend.png);
 
-        @media @media-retina {background-image: url(../i/rec__x2.png);}
-        .ie8 & {background-image: url(../i/rec__sm.png);} //Background-size fallback
+        @media @media-retina {background-image: url(../i/recommend@2x.png);}
+        .ie8 & {background-image: url(../i/recommend_s.png);} //Background-size fallback
         }
 
     &.__ready {
         background-image: url(../i/ready.png);
 
-        @media @media-retina {background-image: url(../i/ready__x2.png);}
-        .ie8 & {background-image: url(../i/ready__sm.png);} //Background-size fallback
+        @media @media-retina {background-image: url(../i/ready@2x.png);}
+        .ie8 & {background-image: url(../i/ready_s.png);} //Background-size fallback
         }
 
     &.__rev {
-        background-image: url(../i/rev.png);
+        background-image: url(../i/review.png);
 
-        @media @media-retina {background-image: url(../i/rev__x2.png);}
-        .ie8 & {background-image: url(../i/rev__sm.png);} //Background-size fallback
+        @media @media-retina {background-image: url(../i/review@2x.png);}
+        .ie8 & {background-image: url(../i/review_s.png);} //Background-size fallback
         }
+
+    &.__deprecated {
+      background-image: url(../i/deprecated.png);
+
+      @media @media-retina {background-image: url(../i/deprecated@2x.png);}
+      .ie8 & {background-image: url(../i/deprecated_s.png);} //Background-size fallback
+      }
     }
 /* /Big badge */
 
@@ -159,8 +170,7 @@
         position: relative;
         z-index: 1;
 
-        margin-left: 50px;
-        margin-top: -7px;
+        margin: -4px -10px 0 20px;
         float: right;
         }
     }
@@ -221,9 +231,6 @@
 
         border-radius: 30px;
         border: solid 1px #67A9D4;
-
-        font-size: inherit;
-        line-height: inherit;
 
         @media @media-retina {padding-bottom: 1px;} //Retina images has shadow
         }
@@ -291,8 +298,8 @@
 
     .source_status_badge {
         position: absolute;
-        top: 7px;
-        right: 5px;
+        top: 9px;
+        right: 9px;
 
         display: none;
         }
