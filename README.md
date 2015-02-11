@@ -4,6 +4,7 @@ Spec Status
 [SourceJS](http://sourcejs.com) plugin for Spec Statuses. Define the state of specific Spec with `dev`, `rec`, `ready`, `deprecated` or any custom badges.
 
 ![image](https://monosnap.com/file/3L2YMOnznEj90QjdZj7Ad8LQ8h1i6P.png)
+
 To install it, run npm in `sourcejs/user` folder:
 
 ```
