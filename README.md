@@ -11,6 +11,7 @@ It's also possible to assign different statuses to subsections of the Spec by ad
 <div class="source_section status-deprecated">
 ```
 
+## Installation 
 
 To install it, run npm in `sourcejs/user` folder:
 
