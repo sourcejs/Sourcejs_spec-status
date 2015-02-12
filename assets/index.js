@@ -515,11 +515,12 @@ define([
             enabledStatus = JSON.parse(localStorage.getItem('source_enabledStatus')) || {},
 
             nav = '<ul class="source_status_filter-list">' +
-                '<li class="source_status_filter-list_li"><a href="#" id="dev" class="source_status_filter-list_a" title="' + specStatusList.dev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/dev.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="exp" class="source_status_filter-list_a" title="' + specStatusList.exp.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/exp.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="rec" class="source_status_filter-list_a" title="' + specStatusList.rec.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/rec.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="ready" class="source_status_filter-list_a" title="' + specStatusList.ready.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/ready.png"></a>'+
-                '<li class="source_status_filter-list_li"><a href="#" id="rev" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/rev.png"></a>' +
+                '<li class="source_status_filter-list_li"><a href="#" id="dev" class="source_status_filter-list_a" title="' + specStatusList.dev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/development_s.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="exp" class="source_status_filter-list_a" title="' + specStatusList.exp.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/experiment_s.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="rec" class="source_status_filter-list_a" title="' + specStatusList.rec.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/recommend_s.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="ready" class="source_status_filter-list_a" title="' + specStatusList.ready.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/ready_s.png"></a>'+
+                '<li class="source_status_filter-list_li"><a href="#" id="rev" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/review_s.png"></a>' +
+                '<li class="source_status_filter-list_li"><a href="#" id="deprecated" class="source_status_filter-list_a" title="' + specStatusList.rev.descr + '"><img class="source_status_filter-list_img" src="/node_modules/sourcejs-spec-status/assets/i/deprecated_s.png"></a>' +
                 '</ul>';
 
         $filterWrapper.prepend(nav);

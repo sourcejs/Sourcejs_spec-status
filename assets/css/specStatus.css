@@ -31,7 +31,7 @@
 .source_status_badge {
   width: 30px;
   height: 30px;
-  background-image: url(../i/development_s.png);
+  background-image: url(../i/development_s.png) !important;
   background-size: cover;
   cursor: help;
   /* Hiding text */
@@ -40,31 +40,31 @@
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge {
-    background-image: url(../i/development_s@2x.png);
+    background-image: url(../i/development_s@2x.png) !important;
   }
 }
 .source_status_badge.__exp {
-  background-image: url(../i/experiment_s.png);
+  background-image: url(../i/experiment_s.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__exp {
-    background-image: url(../i/experiment_s@2x.png);
+    background-image: url(../i/experiment_s@2x.png) !important;
   }
 }
 .source_status_badge.__rec {
-  background-image: url(../i/recommend_s.png);
+  background-image: url(../i/recommend_s.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__rec {
-    background-image: url(../i/recommend_s@2x.png);
+    background-image: url(../i/recommend_s@2x.png) !important;
   }
 }
 .source_status_badge.__ready {
-  background-image: url(../i/ready_s.png);
+  background-image: url(../i/ready_s.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__ready {
-    background-image: url(../i/ready_s@2x.png);
+    background-image: url(../i/ready_s@2x.png) !important;
   }
 }
 .source_status_badge.__rev {
@@ -72,15 +72,15 @@
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__rev {
-    background-image: url(../i/review_s@2x.png);
+    background-image: url(../i/review_s@2x.png) !important;
   }
 }
 .source_status_badge.__deprecated {
-  background-image: url(../i/deprecated_s.png);
+  background-image: url(../i/deprecated_s.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge.__deprecated {
-    background-image: url(../i/deprecated_s@2x.png);
+    background-image: url(../i/deprecated_s@2x.png) !important;
   }
 }
 /* /Small badge */
@@ -89,7 +89,7 @@
 .source_status_badge-big {
   width: 56px;
   height: 56px;
-  background-image: url(../i/development.png);
+  background-image: url(../i/development.png) !important;
   background-size: cover;
   cursor: help;
   /* Hiding text */
@@ -98,66 +98,66 @@
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big {
-    background-image: url(../i/development@2x.png);
+    background-image: url(../i/development@2x.png) !important;
   }
 }
 .ie8 .source_status_badge-big {
-  background-image: url(../i/development_s.png);
+  background-image: url(../i/development_s.png) !important;
 }
 .source_status_badge-big.__exp {
-  background-image: url(../i/experiment.png);
+  background-image: url(../i/experiment.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__exp {
-    background-image: url(../i/experiment@2x.png);
+    background-image: url(../i/experiment@2x.png) !important;
   }
 }
 .ie8 .source_status_badge-big.__exp {
-  background-image: url(../i/experiment_s.png);
+  background-image: url(../i/experiment_s.png) !important;
 }
 .source_status_badge-big.__rec {
-  background-image: url(../i/recommend.png);
+  background-image: url(../i/recommend.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__rec {
-    background-image: url(../i/recommend@2x.png);
+    background-image: url(../i/recommend@2x.png) !important;
   }
 }
 .ie8 .source_status_badge-big.__rec {
-  background-image: url(../i/recommend_s.png);
+  background-image: url(../i/recommend_s.png) !important;
 }
 .source_status_badge-big.__ready {
-  background-image: url(../i/ready.png);
+  background-image: url(../i/ready.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__ready {
-    background-image: url(../i/ready@2x.png);
+    background-image: url(../i/ready@2x.png) !important;
   }
 }
 .ie8 .source_status_badge-big.__ready {
-  background-image: url(../i/ready_s.png);
+  background-image: url(../i/ready_s.png) !important;
 }
 .source_status_badge-big.__rev {
-  background-image: url(../i/review.png);
+  background-image: url(../i/review.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__rev {
-    background-image: url(../i/review@2x.png);
+    background-image: url(../i/review@2x.png) !important;
   }
 }
 .ie8 .source_status_badge-big.__rev {
-  background-image: url(../i/review_s.png);
+  background-image: url(../i/review_s.png) !important;
 }
 .source_status_badge-big.__deprecated {
-  background-image: url(../i/deprecated.png);
+  background-image: url(../i/deprecated.png) !important;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .source_status_badge-big.__deprecated {
-    background-image: url(../i/deprecated@2x.png);
+    background-image: url(../i/deprecated@2x.png) !important;
   }
 }
 .ie8 .source_status_badge-big.__deprecated {
-  background-image: url(../i/deprecated_s.png);
+  background-image: url(../i/deprecated_s.png) !important;
 }
 /* /Big badge */
 /* /Base
@@ -240,7 +240,7 @@
 .source_section .source_section_h .source_status_badge {
   position: absolute;
   right: 4px;
-  top: 3px;
+  top: 4px;
 }
 .source_section h3 .source_status_badge {
   position: absolute;

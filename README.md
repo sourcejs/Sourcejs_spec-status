@@ -5,6 +5,13 @@ Spec Status
 
 ![image](https://monosnap.com/file/3L2YMOnznEj90QjdZj7Ad8LQ8h1i6P.png)
 
+It's also possible to assign different statuses to subsections of the Spec by adding corresponding status-class to source section, e.g.:
+
+```
+<div class="source_section status-deprecated">
+```
+
+
 To install it, run npm in `sourcejs/user` folder:
 
 ```
