@@ -58,4 +58,10 @@ assets: {
 }
 ```
 
+Note: CouchDB must be [configured](https://wiki.apache.org/couchdb/CORS) to allow CORS. Change database configuration from file, or use integrated admin panel - http://127.0.0.1:5984/_utils/config.html.
+
+## Upcoming updates
+
+* Change database solution to SourceJS storage
+
 Compatible with SourceJS v0.4+, for v0.3.* use [previous release](https://github.com/sourcejs/sourcejs-spec-status/archive/v0.1.0.zip).
