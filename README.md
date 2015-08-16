@@ -1,9 +1,9 @@
 Spec Status
 ===============
 
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/sourcejs/Source)
+[![Gitter chat](https://img.shields.io/badge/gitter-join%20chat-1dce73.svg)](https://gitter.im/sourcejs/Source)
 
-[SourceJS](http://sourcejs.com) plugin for Spec Statuses. Define the state of specific Spec with `dev`, `rec`, `ready`, `deprecated` or any custom badges.
+[SourceJS](http://sourcejs.com) plugin for Spec Statuses. Define the state of specific spec page with `dev`, `rec`, `ready`, `deprecated` or any custom badges.
 
 ![image](https://monosnap.com/file/3L2YMOnznEj90QjdZj7Ad8LQ8h1i6P.png)
 
@@ -13,22 +13,31 @@ It's also possible to assign different statuses to subsections of the Spec by ad
 <div class="source_section status-deprecated">
 ```
 
-## Installation 
+## Installation
 
-To install it, run npm in `sourcejs/user` folder:
+Set-up required [dependencies](#dependencies) for the plugin.
+
+Then install plugin to SourceJS running npm in `sourcejs/user` folder:
 
 ```
 npm install sourcejs-spec-status --save
 ```
 
-Then run Grunt update in SourceJS root:
+### Update build
 
 ```
 cd sourcejs
-grunt update
+npm run build
 ```
 
-After restarting the app and defining enabled Spec catalogues in options, you will be able to set status to your Specs.
+Or if you're using sourcejs-npm set-up:
+
+```
+cd node_modules/sourcejs
+npm run build
+```
+
+After build is finished, open any spec in enabled catalogue and check the header `source_info` section.
 
 ## Options
 
@@ -54,7 +63,7 @@ Install it, run locally or remotely and configure your SourceJS in `/user/option
 assets: {
   modulesOptions: {
     couch: {
-      server: 'http://couch-db.url:5984'
+      server: 'http://custom-couch-db.url:5984' // Defaults to http://127.0.0.1:5984
     },
   }
 }
@@ -67,3 +76,9 @@ Note: CouchDB must be [configured](https://wiki.apache.org/couchdb/CORS) to allo
 * Change database solution to SourceJS storage
 
 Compatible with SourceJS v0.4+, for v0.3.* use [previous release](https://github.com/sourcejs/sourcejs-spec-status/archive/v0.1.0.zip).
+
+## FAQ
+
+### Entry JS file is not loaded
+
+If you get a similar 404 loading error for `sourcejs-spec-status.js` as in [this issue](https://github.com/sourcejs/sourcejs-spec-status/issues/7), then re-check if you have re-build SourceJS engine assets with `npm run build`.
